@@ -26,19 +26,20 @@ class CurrencyCollection implements Iterator
     }
 
     /**
-     * @return Currency|false
+     * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return current($this->currencies);
     }
 
     /**
-     * @return Currency|false
+     * @return void
      */
-    public function next()
+    public function next(): void
     {
-        return next($this->currencies);
+        next($this->currencies);
     }
 
     /**

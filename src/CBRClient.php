@@ -31,7 +31,7 @@ final class CBRClient
      * @param array|null $options
      * @throws SoapFault
      */
-    public function __construct(array $options = null)
+    public function __construct(?array $options = null)
     {
         if (is_array($options)) {
             $this->options = $options;
